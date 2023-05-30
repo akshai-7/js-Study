@@ -2,8 +2,6 @@
 
 const myVar = "Akshaikumar";
 console.log(myVar);
-
-
 //string method
 console.log(myVar.length);
 
@@ -19,7 +17,7 @@ console.log(myVar.toUpperCase());
 
 console.log(myVar.toLowerCase());
 
-console.log(myVar.includes('u'));
+console.log(myVar.includes('r'));
 
 console.log(myVar.split('a'));
 
@@ -58,7 +56,6 @@ console.log(myNAme.charAt(Math.floor(Math.random() * myNAme.length)));
 
 
 //if statements
-
 let testmark = 41;
 let grade;
 if (testmark >= 90) {
@@ -80,3 +77,38 @@ else {
     grade = 'F';
 }
 console.log(grade);
+
+
+//switch statements
+switch (15) {
+    case 5:
+        console.log(5);
+        break;
+    case 6:
+        console.log(6);
+        break;
+    default:
+    console.log("NO Match");
+}
+
+//ternary operator
+// condition ?  if true : if false;
+let sub = 10;
+let response = sub >= 10 ? "Welcome" : "Kindly Subscribe";
+console.log(response);
+
+let testscore = 80;
+let grades = testscore >= 90 ? "A" : testscore >= 80 ? "B" : 'C';
+console.log(grades);
+
+//user input 
+// let myIn = confirm("Hello World");
+// console.log(myIn);
+
+let myInput = prompt("Name");
+if (myInput) {
+    console.log(myInput ?? "You didn't Enter Your Name");
+} else {
+    console.log("Please Enter Your Name");
+}
+console.log(myInput.trim().length);
