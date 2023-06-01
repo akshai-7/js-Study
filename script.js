@@ -236,27 +236,89 @@
 // console.log(myobj.name);
 // console.log(myobj2.value());
 
-const vehicle = {
-    door: 2,
-    engin: function () {
-        return "Vrooomm";
-    }
-}
-console.log(vehicle.engin());
+// const vehicle = {
+//     door: 2,
+//     engin: function () {
+//         return "Vrooomm";
+//     }
+// }
+// console.log(vehicle.engin());
 
-const car = Object.create(vehicle);
-console.log(car.engin(), car.door);
+// const car = Object.create(vehicle);
+// console.log(car.engin(), car.door);
 
-const movie = {
-    actor: "kavin",
-    music: "Arr",
-    director: "Lokesh"
-}
-console.log(Object.values(movie));
-console.log(movie.hasOwnProperty('actor'));
+// const movie = {
+//     actor: "kavin",
+//     music: "Arr",
+//     director: "Lokesh"
+// }
+// console.log(Object.values(movie));
+// console.log(movie.hasOwnProperty('actor'));
 
 // destructerobeject
-function signs({music}) {
-    return music
+// function signs({music}) {
+//     return music
+// }
+// console.log(signs(movie));
+
+
+//Clases----
+
+
+// class Pizza {
+//     constructor(typePizza,sizePizza,crustPizza) {
+//         this.type = typePizza;
+//         this.size = sizePizza;
+//         this.crust = crustPizza;
+//         this.toppings = 'olives';
+//     }
+//     getToppings() {
+//         return this.toppings;
+//     }
+//     setToppings(toppingsPizza) {
+//         this.toppings = toppingsPizza;
+//     }
+//     back() {
+//         return console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza with ${this.toppings}`);
+//     }
+// }
+
+// const myPizza = new Pizza('margarita', 'small', 'original');
+// myPizza.setToppings('Sauage');
+// myPizza.back();
+
+
+//Json Javascript Object Notation---
+
+// const myObject = {
+//     name: "Akshai",
+//     content: ['Earn', 'Grow', 'Give'],
+//     sub: function () {
+//         console.log("Thanks For clicking bell icon");
+//     }
+// }
+// console.log(myObject);
+// myObject.sub();
+
+// const sendJson = JSON.stringify(myObject);
+// console.log(sendJson);
+
+// const receiveJson = JSON.parse(sendJson);
+// console.log(receiveJson);
+
+
+//Errors and Errors Handling----
+//reference error
+// "use strict"; 
+// variable = 'Akshai';
+// console.log(variable);
+
+const makeError = () => {
+    try {
+    const variable = 'Akshai';
+        variable = "Kumar";   
+    } catch (err) {
+        console.error(err.name);
+    }
 }
-console.log(signs(movie));
+makeError();
